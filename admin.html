@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EliteCue Admin | Control Panel</title>
+    <style>
+        body { background: #0a0a0a; color: #d4af37; font-family: sans-serif; padding: 20px; }
+        .btn { background: #d4af37; color: black; border: none; padding: 15px; width: 100%; margin: 10px 0; font-weight: bold; border-radius: 5px; cursor: pointer; }
+        .msg-box { background: #1a1a1a; padding: 15px; border: 1px solid #333; border-radius: 10px; }
+        input { width: 90%; padding: 10px; margin-bottom: 10px; background: #222; border: 1px solid #444; color: white; }
+    </style>
+</head>
+<body>
+    <h1>ELITECUE REMOTE</h1>
+    <div class="msg-box">
+        <h3>Timer Control</h3>
+        <button class="btn" onclick="sendCommand('START')">START TIMER</button>
+        <button class="btn" onclick="sendCommand('PAUSE')" style="background:#555">PAUSE</button>
+    </div>
+
+    <div class="msg-box" style="margin-top:20px;">
+        <h3>Flash Message to Stage</h3>
+        <input type="text" id="customMsg" placeholder="Type message (e.g. Next is Elon)">
+        <button class="btn" onclick="sendMessage()">SEND TO STAGE</button>
+    </div>
+
+    <div class="msg-box" style="margin-top:20px;">
+        <h3>Forbes Sync</h3>
+        <button class="btn" style="background:#004400" onclick="triggerInstagram()">POST TO INSTAGRAM</button>
+    </div>
+
+    <script>
+        // Filhaal hum Firebase ya Ably use karenge real-time sync ke liye
+        function sendCommand(cmd) { console.log("Command Sent: " + cmd); alert(cmd + " Sent to Stage!"); }
+        function sendMessage() { 
+            const msg = document.getElementById('customMsg').value;
+            alert("Flashing on Stage: " + msg);
+        }
+        function triggerInstagram() { alert("GitHub Action Triggered: Posting to Insta..."); }
+    </script>
+</body>
+</html>
