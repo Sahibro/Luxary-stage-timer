@@ -1,0 +1,60 @@
+body {
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+    color: #d4af37; /* Classic Gold */
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+    width: 90%;
+}
+
+#event-name {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+#timer {
+    font-size: 15rem;
+    font-weight: 700;
+    text-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+    margin: 20px 0;
+}
+
+#ticker-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+#wealth-ticker {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#flash-message {
+    margin-top: 50px;
+    font-weight: 200;
+    letter-spacing: 8px;
+    color: #ffffff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
